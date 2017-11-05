@@ -1,0 +1,8 @@
+body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {font-family:Lato,alright_sans_lightregular,"Open Sans",Helvetica,Arial,sans-serif;} /*font-size:15px;line-height:1.38461538;color:#333;background-color:#fff*/
+body{font-size:15px}
+code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
+@font-face{font-family:'alright_sans_lightregular';src:url('font/alrightsans-bold-v3-webfont.eot');src:url('font/alrightsans-bold-v3-webfont.eot?#iefix') format('embedded-opentype'),url('font/alrightsans-bold-v3-webfont.woff') format('woff');font-weight:bold;font-style:normal}
+@font-face{font-family:'alright_sans_lightregular';src:url('font/alrightsans-light-v3-webfont.eot');src:url('font/alrightsans-light-v3-webfont.eot?#iefix') format('embedded-opentype'),url('font/alrightsans-light-v3-webfont.woff') format('woff');font-weight:normal;font-style:normal}
+@font-face{font-family:'Lato';src:url('font/Lato-Bold.eot');src:url('font/Lato-Bold.eot?#iefix') format('embedded-opentype'),url('font/Lato-Bold.woff') format('woff');font-weight:bold;font-style:normal}
+@font-face{font-family:'Lato';src:url('font/Lato-Regular.eot');src:url('font/Lato-Regular.eot?#iefix') format('embedded-opentype'),url('font/Lato-Regular.woff') format('woff');font-weight:normal;font-style:normal}
+.well{padding:15px;}
