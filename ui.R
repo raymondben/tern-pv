@@ -14,13 +14,13 @@ fluidPage(theme="spacelab.css",
     tabsetPanel(
         tabPanel("Community",
                  fluidRow(style="margin:20px;",
-                     column(4,selectInput("tr_select","Select transect(s):",multiple=TRUE,selectize=FALSE,size=10,choices=sort(unique(x_site$site_tr))),
-                            sliderInput("year_slider","Select year range:",min=min(x_site$year),max=max(x_site$year),value=range(x_site$year),sep="")),
-                     ##column(8,rbokehOutput("mdsplot"))
-                     column(8,tags$h4("MDS plot"),ggiraphOutput("mdsplot"))
-                 ),
-                 fluidRow(column(4),
-                          column(8,tags$h4("Mean composition of selected points"),
+                          column(4,selectInput("tr_select","Select transect(s):",multiple=TRUE,selectize=FALSE,size=10,choices=sort(unique(x_site$site_tr)))),
+                          column(4,sliderInput("year_slider","Select year range:",min=min(x_site$year),max=max(x_site$year),value=range(x_site$year),sep="")),
+                          column(4)),
+                 fluidRow(
+                     ##column(6,rbokehOutput("mdsplot"))
+                     column(6,tags$h4("MDS plot"),ggiraphOutput("mdsplot")),
+                     column(6,tags$h4("Mean composition of selected points"),
                                  ggiraphOutput("composition_plot")))
                  ),
         tabPanel("Notes",
