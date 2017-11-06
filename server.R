@@ -3,7 +3,7 @@ function(input,output,session) {
     app_version <- "0.0.1"
     output$app_version <- renderText(app_version)
 
-    ggraf <- function(z) renderggiraph(ggiraph(code=print(z)))
+    ggraf <- function(z,selection_type="none") renderggiraph(ggiraph(code=print(z),selection_type=selection_type))
     
     things <- reactiveValues(x_site_filtered=tibble(),idx=NULL)
 
@@ -15,7 +15,7 @@ function(input,output,session) {
         p <- ggplot(x_site,aes(MDS1,MDS2,group=site_tr,shape=site))+
             geom_point_interactive(aes(color=site,tooltip=site_tr_year),alpha=0.5,size=4)##,hover=c("date","site_tr"))
         if (sum(things$idx)>1)
-            p <- p+geom_path_interactive(data=things$x_site_filtered,color="black",alpha=0.75)
+            p <- p+geom_path_interactive(data=things$x_site_filtered,color="black",alpha=0.75,arrow=arrow(angle=20,type="open"))
         if (sum(things$idx)>0)
             p <- p+geom_point_interactive(data=things$x_site_filtered,aes(tooltip=site_tr_year),color="black",alpha=0.75,size=4)
         p <- p+theme_bw()

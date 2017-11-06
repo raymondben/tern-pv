@@ -19,7 +19,7 @@ fluidPage(theme="spacelab.css",
                           column(4)),
                  fluidRow(
                      ##column(6,rbokehOutput("mdsplot"))
-                     column(6,tags$h4("MDS plot"),ggiraphOutput("mdsplot")),
+                     column(6,tags$h4("MDS plot"),tags$p(style="font-size:small;","STRESS:",sprintf("%.02f",mds$stress)),ggiraphOutput("mdsplot")),
                      column(6,tags$h4("Mean composition of selected points"),
                                  ggiraphOutput("composition_plot")))
                  ),
